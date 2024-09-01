@@ -3,43 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - College Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login / Register - College Website</title>
+    <link rel="stylesheet" href="login_styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>College Name</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#academics">Academics</a></li>
-                    <li><a href="index.html#admissions">Admissions</a></li>
-                    <li><a href="index.html#news-events">News & Events</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>College Name</h1>
     </header>
-    <section id="login" class="form-section">
-        <div class="container">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="loginEmail">Email:</label>
-                <input type="email" id="loginEmail" required>
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" required>
-                <button type="submit">Login</button>
-                <p>Don't have an account? <a href="register.html">Register here</a></p>
-            </form>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box login-box active">
+                <h2>Login</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="login-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p class="toggle-link">Don't have an account? <a href="#" id="show-register">Register</a></p>
+                </form>
+            </div>
+            
+            <div class="form-box register-box">
+                <h2>Register</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="register-name">Name</label>
+                        <input type="text" id="register-name" name="register-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="register-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="register-password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-dob">Date of Birth</label>
+                        <input type="date" id="register-dob" name="register-dob" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-address">Address</label>
+                        <textarea id="register-address" name="register-address" rows="3" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-phone">Phone Number</label>
+                        <input type="tel" id="register-phone" name="register-phone" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-course">Course</label>
+                        <select id="register-course" name="register-course" required>
+                            <option value="">Select Course</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="AML">AML</option>
+                            <option value="ADS">ADS</option>
+                            <option value="BIO-TECH">BIO-TECH</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                    <button type="submit">Register</button>
+                    <p class="toggle-link">Already have an account? <a href="#" id="show-login">Login</a></p>
+                </form>
+            </div>
         </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 College Name. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="scripts.js"></script>
+    </div>
+
+    <script>
+        document.getElementById('show-register').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.login-box').classList.remove('active');
+            document.querySelector('.register-box').classList.add('active');
+        });
+
+        document.getElementById('show-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.register-box').classList.remove('active');
+            document.querySelector('.login-box').classList.add('active');
+        });
+    </script>
 </body>
 </html>

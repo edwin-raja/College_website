@@ -1,0 +1,117 @@
+.section {
+    padding: 4rem 0;
+    background: #fff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 5px solid #e8491d;
+    border-bottom: 5px solid #e8491d;
+}
+
+.section .container {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e8491d;
+    text-transform: uppercase;
+    animation: slideInFromBottom 1.5s ease-in-out;
+}
+
+.section p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+    border-radius: 8px;
+}
+
+.form-section {
+    padding: 4rem 0;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Ensure no scrolling */
+}
+
+form {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+    margin: 2rem auto;
+    text-align: left; /* Left align text */
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left; /* Left align input text */
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+form input:focus {
+    border-color: #e8491d;
+    box-shadow: 0 0 5px rgba(232, 73, 29, 0.5);
+}
+
+form button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #e8491d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.4s ease;
+}
+
+form button:hover {
+    background: #d7381c;
+    transform: scale(1.05);
+}
+
+form p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center; /* Center align the paragraph */
+}
+
+form p a {
+    color: #e8491d;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
