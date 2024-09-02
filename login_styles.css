@@ -1,40 +1,97 @@
-/* Reset some default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+}
+body::-webkit-scrollbar-track {
+    background: #3838387c !important;
+}
+body::-webkit-scrollbar-thumb {
+    border: 1px solid #00000079 !important;
+    border-radius: 1px !important;
+}
+
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background: linear-gradient(135deg, #93989f, #c3cfe2);
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-header {
-    width: 100%;
-    background: #007bff;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    font-size: 2rem;
-    margin: 0;
+    overflow-x: hidden; 
 }
 
 .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container p {
+    color: #fff; 
+}
+
+header {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 5px solid #e8491d;
+    position: fixed;
+    width: 100%;
+    height: 11%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.4s ease, padding 0.4s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-top: 12px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: font-size 0.4s ease;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.4s ease;
+}
+
+header nav ul li a:hover {
+    color: #e8491d;
+}
+
+.containers {
     margin-top: 50px;
     width: 100%;
     max-width: 500px;
@@ -88,7 +145,7 @@ header h1 {
 .input-group input:focus,
 .input-group textarea:focus,
 .input-group select:focus {
-    border-color: #007bff;
+    border-color:  #e8491d;
     outline: none;
 }
 
@@ -99,7 +156,7 @@ header h1 {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #e8491d;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -109,7 +166,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #e8491d;
 }
 
 .toggle-link {
@@ -118,7 +175,7 @@ button:hover {
 }
 
 .toggle-link a {
-    color: #007bff;
+    color: #e8491d;
     text-decoration: none;
     font-weight: bold;
 }
